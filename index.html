@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newton Sport | Esports Arena</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:#080a12;color:#fff;line-height:1.5}
+header{position:sticky;top:0;z-index:10;background:rgba(8,10,18,.94);border-bottom:1px solid #202538;backdrop-filter:blur(10px)}
+.nav{max-width:1150px;margin:auto;padding:16px 22px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:24px;font-weight:900;letter-spacing:1px}.logo span{color:#00e5ff}
+nav a{color:#c7cada;text-decoration:none;margin-left:22px;font-size:14px}nav a:hover{color:#00e5ff}
+.hero{min-height:600px;display:flex;align-items:center;background:radial-gradient(circle at 80% 25%,#163b5d 0,transparent 30%),linear-gradient(120deg,#0a0c15 45%,#111d2c)}
+.hero-inner{max-width:1150px;width:100%;margin:auto;padding:70px 22px}
+.badge{display:inline-block;padding:7px 12px;border:1px solid #00e5ff;color:#00e5ff;border-radius:20px;font-size:12px;font-weight:bold;margin-bottom:18px}
+h1{font-size:clamp(45px,8vw,82px);line-height:.95;max-width:760px;text-transform:uppercase}
+h1 span{color:#00e5ff}
+.hero p{max-width:570px;color:#aeb5c7;margin:22px 0;font-size:17px}
+.btn{display:inline-block;background:#00e5ff;color:#031016;padding:13px 20px;border-radius:7px;text-decoration:none;font-weight:800;border:0;cursor:pointer}.btn.alt{background:transparent;color:#fff;border:1px solid #384055;margin-left:8px}
+section{max-width:1150px;margin:auto;padding:65px 22px}.title{display:flex;justify-content:space-between;align-items:end;margin-bottom:24px}.title h2{font-size:30px}.muted{color:#8790a5;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#10131e;border:1px solid #23293b;border-radius:12px;overflow:hidden}.card-top{height:130px;padding:20px;background:linear-gradient(135deg,#182c3e,#10131e)}.game{font-size:13px;color:#00e5ff;font-weight:bold}.card h3{margin-top:10px}.card-body{padding:18px}.row{display:flex;justify-content:space-between;color:#9ca5b8;font-size:13px;margin:9px 0}.prize{color:#fff;font-weight:bold}.card .btn{width:100%;text-align:center;margin-top:10px}
+.leader{width:100%;border-collapse:collapse;background:#10131e;border:1px solid #23293b;border-radius:12px;overflow:hidden}.leader th,.leader td{text-align:left;padding:15px;border-bottom:1px solid #202638}.leader th{color:#7e879c;font-size:12px;text-transform:uppercase}.rank{color:#00e5ff;font-weight:900}
+.match-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.match{background:#10131e;border:1px solid #23293b;padding:20px;border-radius:12px}.live{color:#ff4d67;font-size:12px;font-weight:bold}.teams{display:flex;justify-content:space-between;align-items:center;margin-top:14px;font-weight:bold}
+.cta{background:linear-gradient(100deg,#063846,#111b29);border:1px solid #15576a;border-radius:16px;padding:42px;text-align:center}.cta h2{font-size:35px;margin-bottom:10px}.cta p{color:#aeb5c7;margin-bottom:20px}
+footer{border-top:1px solid #202538;color:#737c90;text-align:center;padding:28px}
+@media(max-width:760px){nav{display:none}.grid{grid-template-columns:1fr}.match-grid{grid-template-columns:1fr}.hero{min-height:520px}.btn{margin-top:5px}.btn.alt{margin-left:4px}}
+</style>
+</head>
+<body>
+<header><div class="nav"><div class="logo">NEWTON <span>SPORT</span></div><nav><a href="#tournaments">Tournaments</a><a href="#matches">Matches</a><a href="#leaderboard">Leaderboard</a><a href="#join">Join</a></nav></div></header>
+
+<div class="hero"><div class="hero-inner">
+<div class="badge">● THE NEXT GENERATION OF ESPORTS</div>
+<h1>PLAY. <span>COMPETE.</span><br>CONQUER.</h1>
+<p>Newton Sport is your arena for competitive gaming — tournaments, rankings, live matches and serious competition.</p>
+<a class="btn" href="#tournaments">Explore Tournaments</a>
+<a class="btn alt" href="#join">Join Newton Sport</a>
+</div></div>
+
+<section id="tournaments">
+<div class="title"><div><p class="muted">COMPETE FOR GLORY</p><h2>Featured Tournaments</h2></div><span class="muted">View all →</span></div>
+<div class="grid">
+<div class="card"><div class="card-top"><div class="game">FREE FIRE</div><h3>Newton Clash #01</h3></div><div class="card-body"><div class="row"><span>Players</span><b>128</b></div><div class="row"><span>Prize Pool</span><span class="prize">₦50,000</span></div><div class="row"><span>Status</span><span>Registration Open</span></div><button class="btn" onclick="register('Newton Clash #01')">Register</button></div></div>
+<div class="card"><div class="card-top"><div class="game">EA SPORTS FC</div><h3>Newton FC Cup</h3></div><div class="card-body"><div class="row"><span>Players</span><b>64</b></div><div class="row"><span>Prize Pool</span><span class="prize">₦100,000</span></div><div class="row"><span>Status</span><span>Registration Open</span></div><button class="btn" onclick="register('Newton FC Cup')">Register</button></div></div>
+<div class="card"><div class="card-top"><div class="game">CALL OF DUTY</div><h3>Newton Warzone</h3></div><div class="card-body"><div class="row"><span>Teams</span><b>32</b></div><div class="row"><span>Prize Pool</span><span class="prize">₦75,000</span></div><div class="row"><span>Status</span><span>Coming Soon</span></div><button class="btn" onclick="register('Newton Warzone')">Notify Me</button></div></div>
+</div></section>
+
+<section id="matches"><div class="title"><div><p class="muted">DON'T MISS THE ACTION</p><h2>Upcoming Matches</h2></div></div>
+<div class="match-grid"><div class="match"><span class="live">● LIVE SOON</span><div class="teams"><span>Team Alpha</span><b>VS</b><span>Night Hawks</span></div><div class="row"><span>Free Fire</span><span>Today • 8:00 PM</span></div></div>
+<div class="match"><span class="live">● UPCOMING</span><div class="teams"><span>Newton FC</span><b>VS</b><span>Elite XI</span></div><div class="row"><span>EA SPORTS FC</span><span>Tomorrow • 7:00 PM</span></div></div></div></section>
+
+<section id="leaderboard"><div class="title"><div><p class="muted">TOP PLAYERS</p><h2>Leaderboard</h2></div></div>
+<table class="leader"><tr><th>#</th><th>Player</th><th>Wins</th><th>Points</th></tr>
+<tr><td class="rank">01</td><td>ShadowX</td><td>18</td><td>1,840</td></tr>
+<tr><td class="rank">02</td><td>KingNova</td><td>16</td><td>1,720</td></tr>
+<tr><td class="rank">03</td><td>Blaze</td><td>15</td><td>1,650</td></tr>
+<tr><td class="rank">04</td><td>Ghost NG</td><td>13</td><td>1,490</td></tr></table></section>
+
+<section id="join"><div class="cta"><h2>Ready to enter the arena?</h2><p>Create your player profile and start competing on Newton Sport.</p><button class="btn" onclick="register('Newton Sport')">Create Player Profile</button></div></section>
+
+<footer>© 2026 Newton Sport • Esports Tournament Platform</footer>
+<script>
+function register(name){
+  alert("Registration selected: "+name+"\\n\\nNext step: connect this button to your registration form.");
+}
+</script>
+</body></html>
